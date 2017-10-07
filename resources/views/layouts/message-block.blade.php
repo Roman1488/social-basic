@@ -1,0 +1,22 @@
+@if(count($errors) > 0)
+    <div class="alert alert-danger">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
+@endif
+@if(Session::has('message'))
+    <div class="alert alert-success">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                {{ Session::get('message') }}
+            </div>
+        </div>
+    </div>
+@endif

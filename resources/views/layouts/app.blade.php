@@ -77,6 +77,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://use.fontawesome.com/f82f61d288.js"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
 </body>
 </html>
