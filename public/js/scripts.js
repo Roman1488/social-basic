@@ -14,7 +14,7 @@ $( document ).ready(function() {
     $('#editPost-saveBtn').on('click', function () {
        $.ajax({
           method: 'POST',
-           url: url,
+           url: urlEdit,
            data: {
                body: $('#modal-postBody').val(),
                postId: postId,

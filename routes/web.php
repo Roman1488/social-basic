@@ -33,3 +33,18 @@ Route::post('/edit', [
     'uses' => 'PostController@postEditPost',
     'as' => 'edit'
 ])->middleware('auth');
+
+Route::post('/profile.save', [
+    'uses' => 'UserController@postSaveProfile',
+    'as' => 'profile.save'
+])->middleware('auth');
+
+Route::get('/profile', [
+    'uses' => 'UserController@getProfile',
+    'as' => 'profile'
+])->middleware('auth');
+
+Route::get('/userimage/{filename}', [
+    'uses' => 'UserController@getUserImage',
+    'as' => 'profile.image'
+])->middleware('auth');
